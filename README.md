@@ -6,6 +6,8 @@ Machine Learning project predicting restaurant ratings using operational feature
 
 Built and compared three ML models (Linear Regression, Decision Tree, Random Forest) to predict restaurant ratings. **Random Forest achieved R² = 0.44**, with Votes identified as the dominant predictor (86% feature importance).
 
+> This project was completed as part of a **Machine Learning internship with Cognifyz Technologies**.
+
 ## 📊 Dataset
 
 - **File used:** `restaurant_data.csv` (not included in this repository)
