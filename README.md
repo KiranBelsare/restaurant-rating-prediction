@@ -53,7 +53,7 @@ restaurant-rating-prediction/
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/YOUR_USERNAME/restaurant-rating-prediction.git
+git clone [https://github.com/YOUR_USERNAME/restaurant-rating-prediction.git](https://github.com/KiranBelsare/restaurant-rating-prediction.git)
 cd restaurant-rating-prediction
 ```
 
@@ -104,8 +104,8 @@ python src/05_feature_importance.py
 
 **Kiran Belsare**
 - Email: kirabel.998@gmail.com
-- LinkedIn: [Your LinkedIn]
-- GitHub: [Your GitHub]
+- LinkedIn: www.linkedin.com/in/kiran-belsare-a6b46128b
+- GitHub: https://github.com/KiranBelsare
 
 ## 📄 License
 
