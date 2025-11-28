@@ -8,10 +8,19 @@ Built and compared three ML models (Linear Regression, Decision Tree, Random For
 
 ## 📊 Dataset
 
+- **File used:** `restaurant_data.csv` (not included in this repository)
 - **Original Records:** 9,551 restaurants
 - **After Cleaning:** 7,316 restaurants
-- **Features:** 4 (Price range, Votes, Table Booking, Online Delivery)
-- **Target:** Aggregate rating (1.8 - 4.9 scale)
+- **Total Columns:** 21
+- **Features Used:** 4
+  - Price range
+  - Votes
+  - Has_Table_booking
+  - Has_Online_delivery
+- **Target Variable:** Aggregate rating (1.8 – 4.9 scale)
+
+> 🔒 **Note:** The raw dataset is intentionally excluded from version control to keep the repository lightweight and avoid sharing raw data files.  
+> To reproduce the results, place `restaurant_data.csv` inside the `data/` folder using the schema described above.
 
 ## 🏆 Results
 
@@ -36,15 +45,19 @@ Built and compared three ML models (Linear Regression, Decision Tree, Random For
 ```
 restaurant-rating-prediction/
 ├── README.md
+├── .gitignore
 ├── requirements.txt
+│
 ├── data/
-│   └── restaurant_data.csv
+│   └── README.md          # Dataset description (actual CSV not included)
+│
 ├── src/
 │   ├── 01_data_exploration.py
 │   ├── 02_data_cleaning.py
 │   ├── 03_train_test_split.py
 │   ├── 04_model_training.py
 │   └── 05_feature_importance.py
+│
 └── docs/
     └── PROJECT_DOCUMENTATION.md
 ```
