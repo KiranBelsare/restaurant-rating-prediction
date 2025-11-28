@@ -1,7 +1,7 @@
 # Restaurant Rating Prediction - Project Documentation
 **Machine Learning Internship - Task 1**
 **Student:** Kiran Belsare
-**Date:** November 2024
+**Date:** November 2025
 
 ---
 
@@ -429,10 +429,10 @@ Rating = 2.5 + (0.210 × Price range) - (0.152 × Table Booking)
 
 **Student:** Kiran Belsare
 **Email:** kirabel.998@gmail.com
-**LinkedIn:** [Your LinkedIn]
-**GitHub:** [Your GitHub]
+**LinkedIn:** www.linkedin.com/in/kiran-belsare-a6b46128b
+**GitHub:** https://github.com/KiranBelsare
 
-**Project Repository:** [Link to GitHub repo]
+**Project Repository:** https://github.com/KiranBelsare/restaurant-rating-prediction.git
 **Live Demo:** [Link if applicable]
 
 ---
@@ -463,7 +463,7 @@ Rating = 2.5 + (0.210 × Price range) - (0.152 × Table Booking)
 
 ## ✅ Project Status: COMPLETE
 
-**Date Completed:** November 24, 2024
+**Date Completed:** November 28, 2025
 
 All objectives met. Ready for submission and interview discussions.
 
