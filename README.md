@@ -53,7 +53,7 @@ restaurant-rating-prediction/
 
 1. **Clone the repository:**
 ```bash
-git clone [https://github.com/YOUR_USERNAME/restaurant-rating-prediction.git](https://github.com/KiranBelsare/restaurant-rating-prediction.git)
+git clone https://github.com/KiranBelsare/restaurant-rating-prediction.git
 cd restaurant-rating-prediction
 ```
 
