@@ -17,10 +17,10 @@ import seaborn as sns         # For prettier visualizations
 # This reads your CSV file into a DataFrame (like Excel table in Python)
 
 # OPTION A: If you have the file locally (save it in same folder as this code)
-df = pd.read_csv('restaurant_data.csv')
+df = pd.read_csv('data/restaurant_data.csv')
 
 # OPTION B: If file is too big or you want to load sample
-# df = pd.read_csv('restaurant_data.csv', nrows=100)  # Load only first 100 rows
+# df = pd.read_csv('data/restaurant_data.csv', nrows=100)  # Load only first 100 rows
 
 # ============================================================================
 # STEP 3: FIRST LOOK AT DATA

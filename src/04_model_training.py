@@ -13,11 +13,17 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import matplotlib.pyplot as plt
 import time
+import pickle                      # ⬅️ built-in, no install needed
+from pathlib import Path           # ⬅️ to make sure models/ folder exists
 
 # ============================================================================
-# ASSUMPTION: You have X_train, X_test, y_train, y_test from STEP 12
+# LOAD TRAIN/TEST SPLIT FROM PREVIOUS STEP
 # ============================================================================
-# If not, run STEP 11 and 12 first!
+
+X_train = pd.read_csv("data/X_train.csv")
+X_test  = pd.read_csv("data/X_test.csv")
+y_train = pd.read_csv("data/y_train.csv").squeeze()
+y_test  = pd.read_csv("data/y_test.csv").squeeze()
 
 print("=" * 60)
 print("STEP 13: TRAINING MACHINE LEARNING MODELS")
@@ -28,6 +34,7 @@ print(f"Training data: {len(X_train)} samples")
 print(f"Testing data: {len(X_test)} samples")
 print(f"Features: {list(X_train.columns)}")
 print()
+
 
 # ============================================================================
 # STEP 13.1: TRAIN MODEL 1 - LINEAR REGRESSION
@@ -338,6 +345,34 @@ print("  📊 STEP 14: Detailed model evaluation")
 print("  🔍 STEP 15: Feature importance analysis")
 print("  📝 STEP 16: Final documentation")
 print()
+
+# ============================================================================
+# STEP 13.8: SAVE TRAINED MODELS FOR LATER (FEATURE IMPORTANCE, DEPLOYMENT, ETC.)
+# ============================================================================
+
+print("=" * 60)
+print("SAVING TRAINED MODELS")
+print("=" * 60)
+
+# Ensure the models directory exists
+Path("models").mkdir(exist_ok=True)
+
+# Save each model as a .pkl file
+with open("models/lr_model.pkl", "wb") as f:
+    pickle.dump(lr_model, f)
+
+with open("models/dt_model.pkl", "wb") as f:
+    pickle.dump(dt_model, f)
+
+with open("models/rf_model.pkl", "wb") as f:
+    pickle.dump(rf_model, f)
+
+print("Saved models to:")
+print("  models/lr_model.pkl")
+print("  models/dt_model.pkl")
+print("  models/rf_model.pkl")
+print()
+
 
 # ============================================================================
 # REMEMBER FOR INTERVIEW:

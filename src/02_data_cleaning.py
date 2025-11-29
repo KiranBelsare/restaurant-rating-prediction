@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load data (if not already loaded)
-df = pd.read_csv('restaurant_data.csv')
+df = pd.read_csv('data/restaurant_data.csv')
 
 print("=" * 60)
 print("ORIGINAL DATA")
@@ -249,6 +249,26 @@ print(f"  - {len(X)} restaurants")
 print(f"  - {len(feature_columns)} features")
 print(f"  - Clean data (no 0 ratings, no extreme outliers)")
 print()
+
+
+# ============================================================================
+# STEP 11.9: SAVE CLEANED FEATURES AND TARGET FOR NEXT STEPS
+# ============================================================================
+
+print("=" * 60)
+print("SAVING CLEANED DATA FOR NEXT STEPS")
+print("=" * 60)
+
+# Save X and y so the next script can load them
+X.to_csv("data/cleaned_features.csv", index=False)
+y.to_csv("data/cleaned_target.csv", index=False)
+
+print("Saved:")
+print("  data/cleaned_features.csv")
+print("  data/cleaned_target.csv")
+print()
+
+
 
 # ============================================================================
 # REMEMBER FOR INTERVIEW:

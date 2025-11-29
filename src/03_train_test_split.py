@@ -20,6 +20,16 @@ from sklearn.model_selection import train_test_split
 # X should have columns: ['Price range', 'Votes', 'Has_Table_Booking', 'Has_Online_Delivery']
 # y should have: Aggregate ratings (1.8 - 4.9)
 
+
+# ============================================================================
+# LOAD CLEANED DATA FROM PREVIOUS STEP
+# ============================================================================
+
+X = pd.read_csv("data/cleaned_features.csv")
+y = pd.read_csv("data/cleaned_target.csv").squeeze()  # squeeze -> Series instead of DataFrame
+
+
+
 print("=" * 60)
 print("STEP 12: TRAIN/TEST SPLIT")
 print("=" * 60)
@@ -192,6 +202,29 @@ print()
 print("=" * 60)
 print("Ready for STEP 13: MODEL TRAINING! 🚀")
 print("=" * 60)
+
+
+# ============================================================================
+# STEP 12.7: SAVE TRAIN/TEST SPLIT FOR NEXT STEP
+# ============================================================================
+
+print("=" * 60)
+print("SAVING TRAIN/TEST SPLIT FOR MODEL TRAINING")
+print("=" * 60)
+
+X_train.to_csv("data/X_train.csv", index=False)
+X_test.to_csv("data/X_test.csv", index=False)
+y_train.to_csv("data/y_train.csv", index=False)
+y_test.to_csv("data/y_test.csv", index=False)
+
+print("Saved:")
+print("  data/X_train.csv")
+print("  data/X_test.csv")
+print("  data/y_train.csv")
+print("  data/y_test.csv")
+print()
+
+
 
 # ============================================================================
 # REMEMBER FOR INTERVIEW:

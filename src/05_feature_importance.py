@@ -8,11 +8,24 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import pickle    # ⬅️ to load the models
 
 # ============================================================================
-# ASSUMPTION: You have trained models from STEP 13
+# LOAD TRAINING DATA AND TRAINED MODELS FROM PREVIOUS STEPS
 # ============================================================================
-# You should have: lr_model, dt_model, rf_model
+
+# 1) Load X_train so we know feature names
+X_train = pd.read_csv("data/X_train.csv")
+
+# 2) Load trained models saved in STEP 13
+with open("models/lr_model.pkl", "rb") as f:
+    lr_model = pickle.load(f)
+
+with open("models/dt_model.pkl", "rb") as f:
+    dt_model = pickle.load(f)
+
+with open("models/rf_model.pkl", "rb") as f:
+    rf_model = pickle.load(f)
 
 print("=" * 60)
 print("STEP 14: FEATURE IMPORTANCE ANALYSIS")
